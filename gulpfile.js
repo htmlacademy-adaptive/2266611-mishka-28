@@ -4,6 +4,9 @@ import less from 'gulp-less';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
+import rename from 'gulp-rename';
+import svgo from 'gulp-svgmin';
+import svgstore from 'gulp-svgstore';
 
 // Styles
 
@@ -16,6 +19,18 @@ export const styles = () => {
     ]))
     .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
+}
+
+// Svg
+
+export const sprite = () => {
+  return gulp.src('source/img/sprite/*.svg')
+  .pipe(svgo())
+  .pipe(svgstore({
+  inlineSvg: true
+  }))
+  .pipe(rename('sprite.svg'))
+  .pipe(gulp.dest('source/img'));
 }
 
 // Server
@@ -41,5 +56,5 @@ const watcher = () => {
 
 
 export default gulp.series(
-  styles, server, watcher
+  sprite, styles, server, watcher
 );

@@ -16,19 +16,19 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="page-header">
-    <button class="page-header__toggle" type="button" aria-label="Открыть/закрыть меню.">
-      <span class="page-header__toggle-line"></span>
-    </button>
-    <nav class="page-header__navigation">
-      <a class="page-header__logotype" href="index.html" aria-label="Переход на главную страницу.">
+  <header class="page-header no-js">
+    <div class="page-header__wrapper">
+      <a class="page-header__logotype" href="index.html" aria-label="Переход на главную страницу." aria-current="page">
         <picture>
           <source media="(min-width: 1150px)" srcset="img/content/mishka-logo-desktop.svg" width="149" height="72">
           <source media="(min-width: 768px)" srcset="img/content/mishka-logo-tablet.svg" width="113" height="46">
-          <img class="page-header__wordmark" src="img/content/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип интернет-магазина Mishka.">
+          <img class="page-header__word-mark" src="img/content/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип интернет-магазина Mishka.">
         </picture>
       </a>
-      <ul class="page-header__list">
+      <button class="page-header__toggle" type="button" aria-label="Открыть/закрыть меню."></button>
+    </div>
+    <nav class="page-header__navigation">
+      <ul class="page-header__list page-header__list--site">
         <li class="page-header__item">
           <a class="page-header__link" href="#" aria-current="page">Каталог товаров</a>
         </li>
@@ -36,9 +36,9 @@
           <a class="page-header__link" href="form.html">Вязание на заказ</a>
         </li>
       </ul>
-      <ul class="page-header__list">
+      <ul class="page-header__list page-header__list--user">
         <li class="page-header__item">
-          <a class="page-header__link" href="#">
+          <a class="page-header__link page-header__link--user" href="#">
             <svg class="page-header__icon" width="18" height="18" aria-hidden="true" focusable="false">
               <use href="img/sprite.svg#search"></use>
             </svg>
@@ -46,7 +46,7 @@
           </a>
         </li>
         <li class="page-header__item">
-          <a class="page-header__link" href="#">
+          <a class="page-header__link page-header__link--user" href="#">
             <svg class="page-header__icon" width="21" height="18" aria-hidden="true" focusable="false">
               <use href="img/sprite.svg#cart"></use>
             </svg>
@@ -54,7 +54,7 @@
           </a>
         </li>
       </ul>
-      <ul class="page-header__list">
+      <ul class="page-header__list page-header__list--promo">
         <li class="page-header__item">
           <a class="page-header__link" href="#">Новые поступления</a>
         </li>
@@ -191,5 +191,6 @@
       </a>
     </div>
   </footer>
+  <script src="js/burger-menu.js"></script>
 </body>
 </html>
