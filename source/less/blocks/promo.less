@@ -1,0 +1,83 @@
+.promo {
+  position: relative;
+
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 31px 30px 42px 30px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+
+    width: 200vw;
+    height: 6px;
+
+    background-image: url("../img/svg/zigzag-mobile.svg");
+    transform: translateX(-50%);
+  }
+}
+
+.promo__subtitle {
+  margin: 0 0 3px 0;
+}
+
+.promo__mark {
+  display: block;
+
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  color: @downy;
+  text-transform: uppercase;
+}
+
+.promo__description {
+  margin: 17px 0 28px 0;
+
+  color: @charcoal;
+}
+
+.promo__list {
+  margin: 0 0 28px 0;
+
+  font-size: 15px;
+  line-height: 20px;
+  color: @charcoal;
+}
+
+.promo__item {
+  display: grid;
+  padding: 10px 0 12px 0;
+
+  border-bottom: 1px solid @whisper;
+
+  gap: 12px;
+  grid-template-columns: 85px 1fr;
+}
+
+.promo__definition {
+  margin: 0;
+}
+
+.promo__product {
+  display: block;
+  margin: 0 auto;
+}
+
+.promo__price {
+  display: block;
+  margin: 25px 0;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  color: @charcoal;
+}
+
+.promo__button {
+  max-width: 260px;
+  margin: 0 auto;
+}
