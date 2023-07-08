@@ -135,7 +135,7 @@
       <h2 class="feedback__subtitle subtitle">Отзывы</h2>
       <div class="feedback__carousel carousel">
         <div class="carousel__wrapper">
-          <blockquote class="carousel__quote">
+          <blockquote class="carousel__quote active">
             <p class="carousel__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
             <cite class="carousel__author">
               <span class="carousel__user">Анастасия Красильникова</span>
@@ -179,7 +179,7 @@
           <span class="contacts__term">E-mail:</span>
           <a class="contacts__email" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
           <span class="contacts__term">Адрес:</span>
-          <address class="contacts__address">г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101</address>
+          <address class="contacts__address">г. Санкт-Петербург<br> ул. Большая Конюшенная<br> д. 19/8, офис 101</address>
         </div>
       </div>
       <div class="contacts__map map">
@@ -223,7 +223,7 @@
           </a>
         </li>
       </ul>
-      <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="nofollow noopener">
+      <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Ссылка на сайт правообладателя HTML Academy." target="_blank" rel="nofollow noopener">
         <span class="page-footer__text">Разработано</span>
         <svg class="page-footer__icon" width="27" height="34" aria-hidden="true" focusable="false">
           <use href="img/sprite.svg#htmlacademy"></use>
@@ -232,6 +232,9 @@
       </a>
     </div>
   </footer>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&onload=init" async></script>
   <script src="js/burger-menu.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/carousel.js"></script>
 </body>
 </html>

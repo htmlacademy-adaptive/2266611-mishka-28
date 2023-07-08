@@ -1,0 +1,26 @@
+.feedback {
+  position: relative;
+
+  padding: 29px 30px 51px 30px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: calc(100% + 60px);
+    height: 6px;
+
+    background-image: url("../img/svg/zigzag-mobile.svg");
+  }
+}
+
+.feedback__subtitle {
+  margin: 0 0 14px 0;
+}
+
+.feedback__button {
+  max-width: 260px;
+  margin: 38px auto 0 auto;
+}

@@ -1,0 +1,58 @@
+.carousel__quote {
+  display: none;
+  margin: 0;
+
+  &.active {
+    display: block;
+  }
+}
+
+.carousel__text {
+  margin: 0 0 33px 0;
+
+  font-size: 15px;
+  line-height: 30px;
+  color: @charcoal;
+}
+
+.carousel__author {
+  font-style: normal;
+  font-size: 17px;
+  line-height: 24px;
+}
+
+.carousel__user {
+  display: block;
+
+  font-weight: 700;
+}
+
+.carousel__nickname {
+  color: @charcoal;
+}
+
+.carousel__toggle {
+  display: flex;
+  margin: 30px 0 0 0;
+}
+
+.carousel__button {
+  width: 100%;
+  padding: 13px 38px;
+
+  background: @transparent;
+  border: 1px solid @whisper;
+  cursor: pointer;
+
+  &--left {
+    .carousel__arrow {
+      transform: rotate(180deg);
+    }
+  }
+
+  &:hover {
+    .carousel__arrow {
+      opacity: 0.6;
+    }
+  }
+}

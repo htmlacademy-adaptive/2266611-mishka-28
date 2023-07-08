@@ -1,0 +1,58 @@
+.contacts {
+  padding: 38px 0 39px 0;
+}
+
+.contacts__content {
+  margin: 0 0 62px 0;
+  padding: 0 30px;
+}
+
+.contacts__subtitle {
+  margin: 0 0 28px 0;
+}
+
+.contacts__wrapper {
+  display: grid;
+  align-items: start;
+
+  font-size: 14px;
+  line-height: 30px;
+  color: @charcoal;
+  column-gap: 10px;
+
+  grid-template-columns: minmax(65px, max-content) 1fr;
+  row-gap: 23px;
+}
+
+.contacts__term {
+  text-transform: lowercase;
+}
+
+.contacts__email {
+  display: block;
+  width: max-content;
+  max-width: 183px;
+
+  color: @charcoal;
+
+  border-bottom: 1px solid @downy-light;
+
+  &:hover {
+    color: @puerto-rico-bright;
+
+    border-color: @puerto-rico-bright;
+  }
+
+  &:active {
+    border-color: rgba(@puerto-rico-bright, 0.1);
+  }
+}
+
+.contacts__address {
+  font-style: normal;
+}
+
+.contacts__button {
+  max-width: 260px;
+  margin: 42px auto 0 auto;
+}
