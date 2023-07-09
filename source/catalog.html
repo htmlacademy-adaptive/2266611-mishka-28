@@ -67,8 +67,8 @@
   </header>
   <main class="page-main">
     <section class="catalog">
-      <div class="catalog__heading">
-        <h1 class="catalog__title title">Каталог товаров</h1>
+      <div class="catalog__heading heading">
+        <h1 class="heading__title">Каталог товаров</h1>
       </div>
       <ul class="catalog__list">
         <li class="catalog__item">
@@ -137,18 +137,20 @@
       </ul>
     </section>
     <section class="production">
-      <h2 class="production__title">Процесс производства</h2>
-      <div class="production__video video">
-        <picture>
-          <source media="(min-width: 1200px)" srcset="img/content/video-desktop.jpg 1x, img/content/video-desktop@2x.jpg 2x" width="683" height="455">
-          <source media="(min-width: 768px)" srcset="img/content/video-tablet.jpg 1x, img/content/video-tablet@2x.jpg 2x" width="668" height="455">
-          <img class="video__poster" src="img/content/video-mobile.jpg" srcset="img/content/video-mobile@2x.jpg 2x" width="260" height="150" alt="Процесс создания вязаной корзинки.">
-        </picture>
-        <a class="video__controls" href="#" aria-label="Воспроизвести видео."></a>
-      </div>
-      <div class="production__wrapper">
-        <p class="production__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-        <a class="production__button button" href="#">Сделать заказ</a>
+      <div class="production__container">
+        <h2 class="production__title">Процесс производства</h2>
+        <div class="production__video video">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/content/video-desktop.jpg 1x, img/content/video-desktop@2x.jpg 2x" width="683" height="455">
+            <source media="(min-width: 768px)" srcset="img/content/video-tablet.jpg 1x, img/content/video-tablet@2x.jpg 2x" width="668" height="455">
+            <img class="video__poster" src="img/content/video-mobile.jpg" srcset="img/content/video-mobile@2x.jpg 2x" width="260" height="150" alt="Процесс создания вязаной корзинки.">
+          </picture>
+          <a class="video__controls" href="#" aria-label="Воспроизвести видео."></a>
+        </div>
+        <div class="production__wrapper">
+          <p class="production__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+          <a class="production__button button" href="#">Сделать заказ</a>
+        </div>
       </div>
     </section>
   </main>
