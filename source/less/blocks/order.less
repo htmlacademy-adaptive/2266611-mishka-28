@@ -1,0 +1,326 @@
+.order {
+  padding: 0 0 55px 0;
+}
+
+.order__description {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 17px 30px 29px 30px;
+
+  font-size: 13px;
+  color: @charcoal;
+}
+
+// Form
+
+.order__fieldset {
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+
+  &--type {
+    margin-bottom: 31px;
+
+    .order__caption {
+      margin-bottom: 30px;
+    }
+  }
+
+  &--color {
+    margin-bottom: 33px;
+
+    .order__caption {
+      margin-bottom: 25px;
+    }
+  }
+
+  &--user {
+    margin-bottom: 34px;
+
+    .order__caption {
+      margin-bottom: 29px;
+    }
+  }
+
+  &--contacts {
+    .order__container {
+      margin-bottom: 34px;
+    }
+
+    .order__caption {
+      margin-bottom: 4px;
+    }
+  }
+
+  &--comment {
+    margin-bottom: 17px;
+
+    .order__caption {
+      margin-bottom: 22px;
+    }
+  }
+}
+
+.order__container {
+  display: grid;
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+// Title and line
+
+.order__caption {
+  display: flex;
+  align-items: center;
+  margin: 0;
+
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 16px;
+  color: @downy;
+  text-transform: uppercase;
+
+  &::after {
+    content: "";
+
+    flex-grow: 1;
+    height: 1px;
+    margin-left: 25px;
+
+    background-color: @downy-light;
+  }
+}
+
+// List
+
+.order__list {
+  display: grid;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  gap: 22px;
+
+  &--radio {
+    gap: 11px;
+
+    .order__control {
+      gap: 19px;
+      grid-template-columns: 42px 1fr;
+    }
+  }
+
+  &--checkbox {
+    gap: 23px;
+
+    .order__control {
+      gap: 23px;
+      grid-template-columns: 38px 1fr;
+    }
+  }
+}
+
+// Sing
+
+.order__value {
+  display: block;
+
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+}
+
+// Control
+
+.order__control {
+  display: grid;
+  align-items: center;
+
+  cursor: pointer;
+
+  &:hover {
+    .order__input::after {
+      border-color: @downy-light;
+    }
+  }
+
+  &:active {
+    .order__input::after {
+      border-color: rgba(@color-black, 0.3);
+    }
+  }
+}
+
+.order__input {
+  position: relative;
+
+  align-self: start;
+  width: 38px;
+  height: 38px;
+  margin: 0;
+
+  border: 0;
+  outline: none;
+  cursor: pointer;
+
+  appearance: none;
+
+  &[type="radio"] {
+    width: 42px;
+    height: 42px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border: 2px solid @charcoal;
+  }
+
+  &[type="radio"]::after {
+    border-radius: 50%;
+  }
+
+  &[type="radio"]:checked {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      width: 18px;
+      height: 18px;
+
+      background-color: @downy-light;
+      border-radius: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+
+  &[type="checkbox"]:checked {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      width: 24px;
+      height: 17px;
+
+      background-image: url("../img/svg/tick.svg");
+      background-repeat: no-repeat;
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+
+  &:focus {
+    &::after {
+      border-color: @downy-light;
+    }
+  }
+}
+
+// Contacts
+
+.order__contact {
+  position: relative;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  &:hover {
+    .order__area {
+      border-color: @downy-light;
+    }
+
+    .order__icon {
+      fill: @downy-light;
+    }
+  }
+}
+
+.order__area {
+  width: 100%;
+  padding: 17px 8px 17px 0;
+
+  font-size: 17px;
+  line-height: 18px;
+  font-family: @ff-open-sans;
+
+  border: none;
+  border-bottom: 2px solid @color-black;
+
+  &[type="tel"] {
+    padding: 16px 45px 18px 0;
+  }
+
+  &[type="email"] {
+    padding: 16px 45px 18px 0;
+  }
+
+  &--textarea {
+    min-height: 142px;
+    padding: 17px;
+
+    border: 2px solid @charcoal;
+
+    resize: none;
+  }
+
+  &::placeholder {
+    opacity: 1;
+  }
+
+  &:focus {
+    border-color: @downy-light;
+    outline: none;
+
+    + .order__icon {
+      fill: @downy-light;
+    }
+  }
+}
+
+.order__icon {
+  position: absolute;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  fill: rgba(@color-black, 0.2);
+
+  &--phone {
+    right: 7px;
+  }
+
+  &--mail {
+    right: 3px;
+  }
+}
+
+// Button
+
+.order__wrapper {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.order__stint {
+  font-size: 14px;
+  line-height: 16px;
+  color: @charcoal;
+}
+
+.order__button {
+  width: 100%;
+  margin: 30px 0 0 0;
+}

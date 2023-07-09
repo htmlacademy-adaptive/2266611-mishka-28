@@ -72,10 +72,10 @@
       </div>
       <p class="order__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
       <form class="order__form" action="https://echo.htmlacademy.ru/courses" method="post">
-        <fieldset class="order__fieldset">
+        <fieldset class="order__fieldset order__fieldset--type">
           <div class="order__container">
             <h2 class="order__caption">Тип</h2>
-            <ul class="order__list">
+            <ul class="order__list order__list--radio">
               <li class="order__item">
                 <label class="order__control">
                   <input class="order__input" type="radio" name="product" value="decoration" checked>
@@ -91,10 +91,10 @@
             </ul>
           </div>
         </fieldset>
-        <fieldset class="order__fieldset">
+        <fieldset class="order__fieldset order__fieldset--color">
           <div class="order__container">
             <h2 class="order__caption">Цвет</h2>
-            <ul class="order__list">
+            <ul class="order__list order__list--checkbox">
               <li class="order__item">
                 <label class="order__control">
                   <input class="order__input" type="checkbox" name="color" value="white" checked>
@@ -134,7 +134,7 @@
             </ul>
           </div>
         </fieldset>
-        <fieldset class="order__fieldset">
+        <fieldset class="order__fieldset order__fieldset--user">
           <div class="order__container">
             <h2 class="order__caption">ФИО</h2>
             <ul class="order__list">
@@ -159,28 +159,32 @@
             </ul>
           </div>
         </fieldset>
-        <fieldset class="order__fieldset">
+        <fieldset class="order__fieldset order__fieldset--contacts">
           <h2 class="visually-hidden">Ваши контактные данные.</h2>
           <div class="order__container">
             <span class="order__caption">Тел</span>
-            <label class="order__label" aria-label="Номер телефона.">
+            <label class="order__contact" aria-label="Номер телефона.">
               <input class="order__area" type="tel" name="phone" id="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
-              <span class="order__icon order__icon--phone"></span>
+              <svg class="order__icon order__icon--phone" width="25" height="24" aria-hidden="true" focusable="false">
+                <use href="img/sprite.svg#phone"></use>
+              </svg>
             </label>
           </div>
           <div class="order__container">
             <span class="order__caption">E-mail</span>
-            <label class="order__label" aria-label="Электронная почта.">
+            <label class="order__contact" aria-label="Электронная почта.">
               <input class="order__area" type="email" name="mail" placeholder="Ваш Email*" required>
-              <span class="order__icon order__icon--mail"></span>
+              <svg class="order__icon order__icon--mail" width="32" height="21" aria-hidden="true" focusable="false">
+                <use href="img/sprite.svg#mail"></use>
+              </svg>
             </label>
           </div>
         </fieldset>
-        <fieldset class="order__fieldset">
+        <fieldset class="order__fieldset order__fieldset--comment">
           <div class="order__container">
             <h2 class="order__caption">Доп</h2>
-            <label class="order__label" aria-label="Дополнительные пожелания.">
-              <textarea class="order__textarea" name="comment" aria-label="Ваш комментарий." placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            <label class="order__contact" aria-label="Дополнительные пожелания.">
+              <textarea class="order__area order__area--textarea" name="comment" aria-label="Ваш комментарий." placeholder="Опишите все ваши пожелания к заказу"></textarea>
             </label>
           </div>
         </fieldset>
