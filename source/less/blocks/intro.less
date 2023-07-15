@@ -1,14 +1,71 @@
 .intro {
+  position: relative;
+
   background-color: @snow;
   background-image: url("../img/background/intro-mobile.jpg");
   background-repeat: no-repeat;
-  background-position: center -22px;
+  background-position: center -23px;
+  background-size: 320px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/background/intro-mobile@2x.jpg");
+  }
+
+  @media (min-width: @vp-768) {
+    padding-bottom: 12px;
+
+    background-image: url("../img/background/intro-tablet.jpg");
+    background-position: center bottom;
+    background-size: 768px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/intro-tablet@2x.jpg");
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+
+      width: 100%;
+      min-width: 768px;
+      height: 24px;
+
+      background-image: url("../img/svg/wave-tablet.svg");
+    }
+  }
+
+  @media (min-width: @vp-1150) {
+    padding-bottom: 17px;
+
+    background-image: url("../img/background/intro-desktop.jpg");
+    background-size: 1150px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/intro-desktop@2x.jpg");
+    }
+
+    &::after {
+      min-width: 1150px;
+      height: 34px;
+
+      background-image: url("../img/svg/wave-desktop.svg");
+    }
+  }
 }
 
 .intro__heading {
   padding: 73px 30px 120px 30px;
 
   background-color: @transparent;
+
+  @media (min-width: @vp-768) {
+    padding: 109px 50px 372px 50px;
+  }
+
+  @media (min-width: @vp-1150) {
+    padding: 114px 50px 355px 50px;
+  }
 }
 
 .intro__list {
@@ -16,6 +73,17 @@
   padding: 0;
 
   list-style: none;
+
+  @media (min-width: @vp-768) {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 668px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @vp-1150) {
+    max-width: 1050px;
+  }
 }
 
 .intro__item {
@@ -27,12 +95,37 @@
     background-color: @puerto-rico;
   }
 
+  &:nth-child(3n) {
+    background-color: @puerto-rico;
+  }
+
+  &:nth-child(4n) {
+    background-color: @downy;
+  }
+
   &:nth-child(odd):hover {
     background-color: @downy-bright;
   }
 
   &:nth-child(even):hover {
     background-color: @puerto-rico-bright;
+  }
+
+  &:nth-child(3n):hover {
+    background-color: @puerto-rico-bright;
+  }
+
+  &:nth-child(4n):hover {
+    background-color: @downy-bright;
+  }
+
+  @media (min-width: @vp-768) {
+    flex-grow: 1;
+    min-width: 334px;
+  }
+
+  @media (min-width: @vp-1150) {
+    min-width: 525px;
   }
 }
 
@@ -61,6 +154,17 @@
     .intro__icon {
       opacity: 0.3;
     }
+  }
+
+  @media (min-width: @vp-768) {
+    padding: 30px 36px 27px 36px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: @vp-1150) {
+    padding: 25px 35px 27px 36px;
   }
 }
 
