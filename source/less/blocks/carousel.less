@@ -7,7 +7,17 @@
   margin: 0;
 
   &.active {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @vp-768) {
+    min-height: 236px;
+  }
+
+  @media (min-width: @vp-1150) {
+    min-height: 191px;
   }
 }
 
@@ -19,13 +29,9 @@
   color: @charcoal;
 
   @media (min-width: @vp-768) {
-    margin: 0 0 60px 0;
+    margin: 0;
 
     font-size: 17px;
-  }
-
-  @media (min-width: @vp-1150) {
-    margin: 0 0 44px 0;
   }
 }
 
