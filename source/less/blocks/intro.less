@@ -15,7 +15,7 @@
     padding-bottom: 12px;
 
     background-image: url("../img/background/intro-tablet.jpg");
-    background-position: center bottom;
+    background-position: center -48px;
     background-size: 768px;
 
     @media (min-resolution: 2dppx) {
@@ -31,12 +31,12 @@
       min-width: 768px;
       height: 24px;
 
-      background-image: url("../img/svg/wave-tablet.svg");
+      background-image: url("../img/svg/wave-fill-tablet.svg");
     }
   }
 
   @media (min-width: @vp-1150) {
-    padding-bottom: 17px;
+    padding-bottom: 19px;
 
     background-image: url("../img/background/intro-desktop.jpg");
     background-size: 1150px;
@@ -49,13 +49,13 @@
       min-width: 1150px;
       height: 34px;
 
-      background-image: url("../img/svg/wave-desktop.svg");
+      background-image: url("../img/svg/wave-fill-desktop.svg");
     }
   }
 }
 
 .intro__heading {
-  padding: 73px 30px 120px 30px;
+  padding: 73px 30px 118px 30px;
 
   background-color: @transparent;
 
@@ -157,14 +157,14 @@
   }
 
   @media (min-width: @vp-768) {
-    padding: 30px 36px 27px 36px;
+    padding: 27px 36px 30px 36px;
 
     font-size: 20px;
     line-height: 30px;
   }
 
   @media (min-width: @vp-1150) {
-    padding: 25px 35px 27px 36px;
+    padding: 25px 35px 30px 36px;
   }
 }
 
@@ -178,6 +178,10 @@
   align-items: flex-end;
   width: 60px;
   height: 62px;
+
+  @media (min-width: @vp-768) {
+    justify-content: end;
+  }
 }
 
 .intro__icon {

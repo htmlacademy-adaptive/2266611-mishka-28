@@ -5,39 +5,12 @@
   margin: 0 auto;
   padding: 31px 30px 42px 30px;
 
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-
-    width: calc(100% + 60px);
-    height: 6px;
-
-    background-image: url("../img/svg/zigzag-mobile.svg");
-  }
-
   @media (min-width: @vp-768) {
     padding: 41px 50px 69px 50px;
-
-    &::after {
-      height: 17px;
-
-      background-image: url("../../img/svg/zigzag-tablet.svg");
-    }
   }
 
   @media (min-width: @vp-1150) {
     padding: 54px 50px 96px 50px;
-
-    &::after {
-      left: 50px;
-
-      width: 1050px;
-      height: 23px;
-
-      background-image: url("../../img/svg/zigzag-desktop.svg");
-    }
   }
 }
 
@@ -87,7 +60,8 @@
   }
 
   @media (min-width: @vp-1150) {
-    margin: 8px 0 0 0;
+    max-width: 103px;
+    margin: 8px 0 0 30px;
   }
 }
 
@@ -105,14 +79,14 @@
 
 
   @media (min-width: @vp-1150) {
-    margin-left: 145px;
+    margin-left: 175px;
 
     grid-template-columns: 292px 1fr;
   }
 }
 
 .promo__description {
-  margin: 17px 0 28px 0;
+  margin: 17px 0 18px 0;
 
   color: @charcoal;
 
@@ -126,7 +100,7 @@
   }
 
   @media (min-width: @vp-1150) {
-    margin: 0 0 60px 0;
+    margin: 0 0 54px 0;
   }
 }
 
@@ -140,17 +114,17 @@
   grid-column: 1/2;
 
   @media (min-width: @vp-768) {
-    margin: 0 0 57px 0;
+    margin: 0 0 59px 0;
   }
 
   @media (min-width: @vp-1150) {
-    margin: 0 0 109px 0;
+    margin: 0 0 111px 0;
   }
 }
 
 .promo__item {
   display: grid;
-  padding: 10px 0 12px 0;
+  padding: 9px 0 11px 0;
 
   border-bottom: 1px solid @whisper;
 
@@ -185,7 +159,7 @@
 
 .promo__price {
   display: block;
-  margin: 25px 0;
+  margin: 29px 0 25px 0;
 
   font-weight: 700;
   font-size: 18px;
@@ -199,6 +173,10 @@
     margin: 0 0 33px 0;
 
     font-size: 20px;
+  }
+
+  @media (min-width: @vp-1150) {
+    margin: 0 0 35px 0;
   }
 }
 

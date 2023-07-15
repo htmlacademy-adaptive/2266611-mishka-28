@@ -1,3 +1,7 @@
+.carousel {
+  position: relative;
+}
+
 .carousel__quote {
   display: none;
   margin: 0;
@@ -13,9 +17,22 @@
   font-size: 15px;
   line-height: 30px;
   color: @charcoal;
+
+  @media (min-width: @vp-768) {
+    margin: 0 0 60px 0;
+
+    font-size: 17px;
+  }
+
+  @media (min-width: @vp-1150) {
+    margin: 0 0 44px 0;
+  }
 }
 
 .carousel__author {
+  display: block;
+  max-width: 285px;
+
   font-style: normal;
   font-size: 17px;
   line-height: 24px;
@@ -25,20 +42,40 @@
   display: block;
 
   font-weight: 700;
+  font-size: 17px;
+
+  @media (min-width: @vp-768) {
+    font-size: 18px;
+  }
+
+  @media (min-width: @vp-1150) {
+    font-size: 17px;
+  }
 }
 
 .carousel__nickname {
+  display: block;
+  margin-top: 3px;
+
+  font-size: 17px;
+  line-height: 30px;
   color: @charcoal;
 }
 
 .carousel__toggle {
   display: flex;
-  margin: 30px 0 0 0;
+  margin: 29px 0 0 0;
+
+  @media (min-width: @vp-768) {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
 }
 
 .carousel__button {
   width: 100%;
-  padding: 13px 38px;
+  padding: 10px 38px;
 
   background: @transparent;
   border: 1px solid @whisper;
@@ -54,5 +91,12 @@
     .carousel__arrow {
       opacity: 0.6;
     }
+  }
+
+  @media (min-width: @vp-768) {
+    width: auto;
+    padding: 12px 19px;
+
+    border: none;
   }
 }
