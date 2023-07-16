@@ -116,11 +116,15 @@
   &:hover {
     color: @puerto-rico-bright;
 
-    border-color: @puerto-rico-bright;
+    &::before {
+      background-color: @puerto-rico-bright;
+    }
   }
 
   &:active {
-    border-color: rgba(@puerto-rico-bright, 0.1);
+    &::before {
+      opacity: 0.1;
+    }
   }
 
   @media (min-width: @vp-768) {

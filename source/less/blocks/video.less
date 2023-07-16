@@ -11,7 +11,12 @@
   object-fit: cover;
 
   @media (min-width: @vp-1150) {
-    max-height: 100%;
+    position: absolute;
+    top: 50%;
+
+    max-height: none;
+
+    transform: translateY(-50%);
   }
 }
 
