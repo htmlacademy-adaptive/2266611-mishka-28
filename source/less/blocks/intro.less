@@ -21,18 +21,6 @@
     @media (min-resolution: 2dppx) {
       background-image: url("../img/background/intro-tablet@2x.jpg");
     }
-
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-
-      width: 100%;
-      min-width: 768px;
-      height: 24px;
-
-      background-image: url("../img/svg/wave-fill-tablet.svg");
-    }
   }
 
   @media (min-width: @vp-1150) {
@@ -43,13 +31,6 @@
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/background/intro-desktop@2x.jpg");
-    }
-
-    &::after {
-      min-width: 1150px;
-      height: 34px;
-
-      background-image: url("../img/svg/wave-fill-desktop.svg");
     }
   }
 }

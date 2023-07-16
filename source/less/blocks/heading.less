@@ -1,7 +1,17 @@
 .heading {
+  position: relative;
+
   padding: 73px 30px 74px 30px;
 
   background-color: @white-smoke;
+
+  @media (min-width: @vp-768) {
+    padding: 56px 50px 86px 50px;
+  }
+
+  @media (min-width: @vp-1150) {
+    padding: 57px 50px 115px 50px;
+  }
 }
 
 .heading__title {
