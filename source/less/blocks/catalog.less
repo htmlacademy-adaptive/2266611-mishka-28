@@ -51,6 +51,15 @@
   max-height: 300px;
   overflow: hidden;
 
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:focus-visible {
+    outline: none;
+    opacity: 0.5;
+  }
+
   @media (min-width: @vp-768) {
     position: relative;
 
@@ -116,6 +125,12 @@
     opacity: 0.3;
   }
 
+  &:focus-visible {
+    color: @downy;
+
+    outline: none;
+  }
+
   @media (min-width: @vp-768) {
     font-size: 20px;
   }
@@ -176,6 +191,14 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  &:focus-visible {
+    outline: none;
+
+    .catalog__icon {
+      fill: @downy;
+    }
   }
 
   @media (min-width: @vp-768) {

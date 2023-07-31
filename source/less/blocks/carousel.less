@@ -64,6 +64,20 @@
   font-size: 17px;
   line-height: 30px;
   color: @charcoal;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:focus-visible {
+    color: @downy;
+
+    outline: none;
+  }
 }
 
 .carousel__toggle {
@@ -95,6 +109,16 @@
     .carousel__arrow {
       opacity: 0.6;
     }
+  }
+
+  &:active {
+    .carousel__arrow {
+      opacity: 0.3;
+    }
+  }
+
+  &:focus-visible {
+    outline-color: @downy;
   }
 
   @media (min-width: @vp-768) {

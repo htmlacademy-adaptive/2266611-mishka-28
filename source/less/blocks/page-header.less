@@ -57,6 +57,11 @@
     opacity: 0.3;
   }
 
+  &:focus-visible {
+    outline: none;
+    opacity: 0.6;
+  }
+
   @media (min-width: @vp-768) {
     width: 113px;
     height: 46px;
@@ -357,12 +362,24 @@
     opacity: 0.3;
   }
 
+  &:focus-visible {
+    color: @downy;
+
+    outline: none;
+  }
+
   &--user:hover {
-    span {
+    .page-header__cart {
       opacity: 0.6;
     }
 
-    svg {
+    .page-header__icon {
+      fill: @downy;
+    }
+  }
+
+  &--user:focus-visible {
+    .page-header__icon {
       fill: @downy;
     }
   }

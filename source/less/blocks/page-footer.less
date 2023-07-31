@@ -38,6 +38,14 @@
     opacity: 0.3;
   }
 
+  &:focus-visible {
+    outline: none;
+
+    .page-footer__wordmark {
+      fill: @puerto-rico-bright;
+    }
+  }
+
   @media (min-width: @vp-768) {
     display: flex;
   }
@@ -79,6 +87,14 @@
   &:active {
     opacity: 0.3;
   }
+
+  &:focus-visible {
+    outline: none;
+
+    .page-footer__social {
+      fill: @puerto-rico-bright;
+    }
+  }
 }
 
 .page-footer__social {
@@ -104,6 +120,12 @@
     .page-footer__icon {
       opacity: 0.3;
     }
+  }
+
+  &:focus-visible {
+    color: @puerto-rico-bright;
+
+    outline: none;
   }
 }
 
