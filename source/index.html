@@ -13,7 +13,7 @@
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
   <header class="page-header no-js">
@@ -38,7 +38,7 @@
       </ul>
       <ul class="page-header__list page-header__list--user">
         <li class="page-header__item">
-          <a class="page-header__link page-header__link--user" href="#">
+          <a class="page-header__link page-header__link--user" href="#" aria-label="Поиск по сайту.">
             <svg class="page-header__icon" width="18" height="18" aria-hidden="true" focusable="false">
               <use href="img/sprite.svg#search"></use>
             </svg>
@@ -117,6 +117,9 @@
         </dl>
         <div class="promo__image">
           <picture>
+            <source type="image/webp" media="(min-width: 1150px)" srcset="img/content/triple-set-desktop.webp 1x, img/content/triple-set-desktop@2x.webp 2x" width="525" height="636">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/content/triple-set-tablet.webp 1x, img/content/triple-set-tablet@2x.webp 2x" width="334" height="404">
+            <source type="image/webp" srcset="img/content/triple-set-mobile.webp 1x, img/content/triple-set-mobile@2x.webp 2x" width="260" height="315">
             <source media="(min-width: 1150px)" srcset="img/content/triple-set-desktop.jpg 1x, img/content/triple-set-desktop@2x.jpg 2x" width="525" height="636">
             <source media="(min-width: 768px)" srcset="img/content/triple-set-tablet.jpg 1x, img/content/triple-set-tablet@2x.jpg 2x" width="334" height="404">
             <img class="promo__product" src="img/content/triple-set-mobile.jpg" srcset="img/content/triple-set-mobile@2x.jpg 2x" width="260" height="315" alt="Набор из трех вязаных корзинок разного размера">
@@ -165,12 +168,12 @@
             </blockquote>
           </div>
           <div class="carousel__toggle">
-            <button class="carousel__button carousel__button--left" type="button">
+            <button class="carousel__button carousel__button--left" type="button" aria-label="Предыдущий отзыв.">
               <svg class="carousel__arrow" width="50" height="26" aria-hidden="true" focusable="false">
                 <use href="img/sprite.svg#arrow"></use>
               </svg>
             </button>
-            <button class="carousel__button carousel__button--right" type="button">
+            <button class="carousel__button carousel__button--right" type="button" aria-label="Следующий отзыв.">
               <svg class="carousel__arrow" width="50" height="26" aria-hidden="true" focusable="false">
                 <use href="img/sprite.svg#arrow"></use>
               </svg>
@@ -192,6 +195,9 @@
       </div>
       <div class="contacts__map map">
         <picture>
+          <source type="image/webp" media="(min-width: 1150px)" srcset="img/content/map-desktop.webp 1x, img/content/map-desktop@2x.webp 2x" width="527" height="457">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/content/map-tablet.webp 1x, img/content/map-tablet@2x.webp 2x" width="768" height="457">
+          <source type="image/webp" srcset="img/content/map-mobile.webp 1x, img/content/map-mobile@2x.webp 2x" width="320" height="454">
           <source media="(min-width: 1150px)" srcset="img/content/map-desktop.jpg 1x, img/content/map-desktop@2x.jpg 2x" width="527" height="457">
           <source media="(min-width: 768px)" srcset="img/content/map-tablet.jpg 1x, img/content/map-tablet@2x.jpg 2x" width="768" height="457">
           <img class="map__image" src="img/content/map-mobile.jpg" srcset="img/content/map-mobile@2x.jpg 2x" width="320" height="454" alt="Карта расположения интернет-магазина Mishka.">
@@ -273,9 +279,9 @@
     </div>
   </div>
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&onload=init" async></script>
-  <script src="js/burger-menu.js"></script>
-  <script src="js/modal.js"></script>
-  <script src="js/map.js"></script>
-  <script src="js/carousel.js"></script>
+  <script src="js/burger-menu.min.js"></script>
+  <script src="js/modal.min.js"></script>
+  <script src="js/map.min.js"></script>
+  <script src="js/carousel.min.js"></script>
 </body>
 </html>
