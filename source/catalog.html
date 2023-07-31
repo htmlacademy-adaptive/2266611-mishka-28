@@ -84,7 +84,7 @@
             <span class="catalog__description">Рост 30 см, вес 200 г</span>
             <div class="catalog__order">
               <span class="catalog__price">1 200 руб.</span>
-              <button class="catalog__button" type="button">
+              <button class="catalog__button order-button" type="button">
                 <svg class="catalog__icon" width="20" height="19" aria-hidden="true" focusable="false">
                   <use href="img/sprite.svg#cart"></use>
                 </svg>
@@ -105,7 +105,7 @@
             <span class="catalog__description">Диаметр 15 см, высота 10 см</span>
             <div class="catalog__order">
               <span class="catalog__price">690 руб.</span>
-              <button class="catalog__button" type="button">
+              <button class="catalog__button order-button" type="button">
                 <svg class="catalog__icon" width="20" height="19" aria-hidden="true" focusable="false">
                   <use href="img/sprite.svg#cart"></use>
                 </svg>
@@ -126,7 +126,7 @@
             <span class="catalog__description">Диаметр 30 см, высота 30 см</span>
             <div class="catalog__order">
               <span class="catalog__price">1 500 руб.</span>
-              <button class="catalog__button" type="button">
+              <button class="catalog__button order-button" type="button">
                 <svg class="catalog__icon" width="20" height="19" aria-hidden="true" focusable="false">
                   <use href="img/sprite.svg#cart"></use>
                 </svg>
@@ -193,6 +193,39 @@
       </a>
     </div>
   </footer>
+  <div class="modal">
+    <div class="modal__wrapper">
+      <div class="modal__overlay"></div>
+      <div class="modal__content">
+        <h2 class="modal__title">Добавить в&nbsp;корзину</h2>
+        <span class="modal__text">Выберите размер:</span>
+        <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post">
+          <ul class="modal__list">
+            <li class="modal__item">
+              <label class="modal__control">
+                <input class="visually-hidden modal__input" type="radio" name="size" value="s" checked>
+                <span class="modal__mark">S</span>
+              </label>
+            </li>
+            <li class="modal__item">
+              <label class="modal__control">
+                <input class="visually-hidden modal__input" type="radio" name="size" value="m" checked>
+                <span class="modal__mark">M</span>
+              </label>
+            </li>
+            <li class="modal__item">
+              <label class="modal__control">
+                <input class="visually-hidden modal__input" type="radio" name="size" value="l" checked>
+                <span class="modal__mark">L</span>
+              </label>
+            </li>
+          </ul>
+          <button class="modal__button button" type="submit">Добавить</button>
+        </form>
+      </div>
+    </div>
+  </div>
   <script src="js/burger-menu.js"></script>
+  <script src="js/modal.js"></script>
 </body>
 </html>

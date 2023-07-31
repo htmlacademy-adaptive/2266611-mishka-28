@@ -5,12 +5,12 @@ const quoteContainer = document.querySelectorAll('.carousel__quote')
 let active = 0;
 
 nextButton.onclick = () => {
-  quoteContainer[active].classList.remove('active');
+  quoteContainer[active].classList.remove('is-active');
   if (active + 1 == quoteContainer.length) {
     active = 0;
   }
   else {
     active++;
   }
-  quoteContainer[active].classList.add('active');
+  quoteContainer[active].classList.add('is-active');
 }
