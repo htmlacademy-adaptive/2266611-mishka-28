@@ -358,14 +358,8 @@
     opacity: 0.6;
   }
 
-  &:active {
+  &:not(&--user):active {
     opacity: 0.3;
-  }
-
-  &:focus-visible {
-    color: @downy;
-
-    outline: none;
   }
 
   &--user:hover {
@@ -378,7 +372,15 @@
     }
   }
 
-  &--user:focus-visible {
+  &--user:active {
+    opacity: 0.3;
+  }
+
+  &:focus-visible {
+    color: @downy;
+
+    outline: none;
+
     .page-header__icon {
       fill: @downy;
     }
