@@ -3,14 +3,10 @@
 }
 
 .carousel__quote {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   margin: 0;
-
-  &.is-active {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
 
   @media (min-width: @vp-768) {
     min-height: 236px;
@@ -99,7 +95,7 @@
   border: 1px solid @whisper;
   cursor: pointer;
 
-  &--left {
+  &--previous {
     .carousel__arrow {
       transform: rotate(180deg);
     }
