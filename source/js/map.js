@@ -10,7 +10,7 @@ function init(ymaps) {
     balloonContentFooter: 'Санкт-Петербург'
   }, {
     iconLayout: 'default#image',
-    iconImageHref: "img/svg/map-marker.svg",
+    iconImageHref: 'img/svg/map-marker.svg',
     iconImageSize: [67, 100],
     iconImageOffset: [-30, -90]
   });
