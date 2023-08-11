@@ -2,20 +2,13 @@
   position: relative;
 
   background-color: @snow;
-  background-image: url("../img/background/intro-mobile.jpg");
   background-repeat: no-repeat;
-  background-position: center -23px;
-  background-size: 320px;
-
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/background/intro-mobile@2x.jpg");
-  }
+  background-position: center bottom;
 
   @media (min-width: @vp-768) {
     padding-bottom: 12px;
 
     background-image: url("../img/background/intro-tablet.jpg");
-    background-position: center -48px;
     background-size: 768px;
 
     @media (min-resolution: 2dppx) {
@@ -36,12 +29,23 @@
 }
 
 .intro__heading {
+  min-height: 281px;
   padding: 73px 30px 118px 30px;
 
   background-color: @transparent;
+  background-image: url("../img/background/intro-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 320px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/background/intro-mobile@2x.jpg");
+  }
 
   @media (min-width: @vp-768) {
     padding: 109px 50px 372px 50px;
+
+    background-image: none;
   }
 
   @media (min-width: @vp-1150) {
