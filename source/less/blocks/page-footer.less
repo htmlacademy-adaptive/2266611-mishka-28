@@ -1,0 +1,142 @@
+.page-footer {
+  padding: 28px 0 23px 0;
+
+  background-color: @white-smoke;
+
+  @media (min-width: @vp-768) {
+    padding: 50px 0 58px 0;
+  }
+}
+
+.page-footer__container {
+  display: grid;
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0 30px;
+
+  justify-items: center;
+  row-gap: 22px;
+
+  @media (min-width: @vp-768) {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding: 0 50px;
+  }
+}
+
+.page-footer__logotype {
+  display: none;
+
+  &:hover {
+    .page-footer__wordmark {
+      fill: @puerto-rico-bright;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:focus-visible {
+    outline: none;
+
+    .page-footer__wordmark {
+      fill: @puerto-rico-bright;
+    }
+  }
+
+  @media (min-width: @vp-768) {
+    display: flex;
+  }
+}
+
+.page-footer__list {
+  display: grid;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+  padding: 0 0 31px 0;
+
+  list-style: none;
+  column-gap: 30px;
+
+  border-bottom: 1px solid @whisper-light;
+
+  grid-template-columns: repeat(3, 28px);
+  row-gap: 10px;
+
+  @media (min-width: @vp-768) {
+    max-width: 150px;
+    margin-top: 6px;
+    padding: 0;
+
+    border: none;
+  }
+}
+
+.page-footer__link {
+  display: flex;
+
+  &:hover {
+    .page-footer__social {
+      fill: @puerto-rico-bright;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:focus-visible {
+    outline: none;
+
+    .page-footer__social {
+      fill: @puerto-rico-bright;
+    }
+  }
+}
+
+.page-footer__social {
+  fill: @aubergine;
+}
+
+.page-footer__copyright {
+  display: flex;
+  align-items: center;
+
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 18px;
+  color: @color-black;
+
+  &:hover {
+    .page-footer__icon {
+      fill: @puerto-rico-bright;
+    }
+  }
+
+  &:active {
+    .page-footer__icon {
+      opacity: 0.3;
+    }
+  }
+
+  &:focus-visible {
+    color: @puerto-rico-bright;
+
+    outline: none;
+  }
+}
+
+.page-footer__text {
+  display: block;
+  max-width: 130px;
+  margin-right: 27px;
+}
+
+.page-footer__icon {
+  flex-shrink: 1;
+
+  fill: @downy;
+}

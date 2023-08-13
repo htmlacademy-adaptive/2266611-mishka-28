@@ -1,0 +1,177 @@
+.contacts {
+  position: relative;
+
+  padding: 39px 0 39px 0;
+
+  @media (min-width: @vp-768) {
+    padding: 68px 0 57px 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 45px;
+      right: 53px;
+
+      width: 47px;
+      height: 81px;
+
+      background-image: url("../img/svg/flag.svg");
+    }
+  }
+
+  @media (min-width: @vp-1150) {
+    display: grid;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 71px 50px 105px 224px;
+
+    column-gap: 28px;
+
+    grid-template-columns: 1fr 527px;
+    grid-template-rows: repeat(2, auto);
+
+    &::before {
+      top: 132px;
+      left: 113px;
+    }
+  }
+}
+
+.contacts__content {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0 30px 63px 30px;
+
+  @media (min-width: @vp-768) {
+    padding: 0 50px 49px 50px;
+  }
+
+  @media (min-width: @vp-1150) {
+    padding: 0;
+  }
+}
+
+.contacts__title {
+  margin: 0 0 28px 0;
+
+  @media (min-width: @vp-768) {
+    margin: 0 0 48px 0;
+  }
+
+  @media (min-width: @vp-1150) {
+    margin: 78px 0 35px 0;
+  }
+}
+
+.contacts__wrapper {
+  display: grid;
+  align-items: start;
+
+  font-size: 14px;
+  line-height: 30px;
+  color: @charcoal;
+  column-gap: 12px;
+
+  grid-template-columns: minmax(65px, max-content) 1fr;
+  row-gap: 29px;
+
+  @media (min-width: @vp-768) {
+    font-size: 17px;
+
+    grid-template-columns: minmax(65px, max-content) 244px minmax(65px, max-content) 1fr;
+  }
+
+  @media (min-width: @vp-1150) {
+    margin-bottom: 35px;
+
+    grid-template-columns: minmax(65px, max-content) 1fr;
+  }
+}
+
+.contacts__term {
+  text-transform: lowercase;
+}
+
+.contacts__email {
+  position: relative;
+
+  display: block;
+  width: max-content;
+  max-width: 183px;
+
+  line-height: 30px;
+  color: @charcoal;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 3px;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: @downy-light;
+  }
+
+  &:hover {
+    color: @puerto-rico-bright;
+
+    &::before {
+      background-color: @puerto-rico-bright;
+    }
+  }
+
+  &:active {
+    &::before {
+      opacity: 0.1;
+    }
+  }
+
+  &:focus-visible {
+    color: @puerto-rico-bright;
+
+    outline: none;
+  }
+
+  @media (min-width: @vp-768) {
+    max-width: 205px;
+
+    &::before {
+      bottom: -1px;
+    }
+  }
+
+  @media (min-width: @vp-1150) {
+    &::before {
+      bottom: -5px;
+    }
+  }
+}
+
+.contacts__address {
+  font-style: normal;
+}
+
+.contacts__button {
+  max-width: 260px;
+  margin: 42px auto 0 auto;
+
+  @media (min-width: @vp-768) {
+    max-width: 230px;
+    margin: 56px auto 0 auto;
+  }
+
+  @media (min-width: @vp-1150) {
+    align-self: flex-end;
+    margin: 0;
+  }
+}
+
+.contacts__map {
+  @media (min-width: @vp-1150) {
+    align-self: end;
+
+    grid-column: 2/-1;
+    grid-row: 1/-1;
+  }
+}

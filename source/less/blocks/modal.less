@@ -1,0 +1,160 @@
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+
+  transform: scale(1.1);
+  visibility: hidden;
+  opacity: 0;
+
+  transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+
+  pointer-events: none;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &.is-active {
+    transform: scale(1);
+    visibility: visible;
+    opacity: 1;
+
+    transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+
+    pointer-events: auto;
+  }
+}
+
+.modal__wrapper {
+  position: relative;
+
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 60px 40px;
+
+  background-color: rgba(@color-white, 0.8);
+}
+
+.modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  cursor: pointer;
+}
+
+.modal__content {
+  z-index: 15;
+
+  width: 100%;
+  max-width: 566px;
+  padding: 28px 30px 46px 30px;
+
+  background-color: @color-white;
+  border: 1px solid #c6c6c6;
+  box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25);
+
+  @media (min-width: @vp-768) {
+    padding: 37px 30px 46px 30px;
+  }
+}
+
+.modal__title {
+  margin: 0 auto 14px auto;
+
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (min-width: @vp-768) {
+    margin: 0 auto 11px auto;
+
+    font-size: 30px;
+    line-height: 57px;
+  }
+}
+
+.modal__text {
+  display: block;
+  margin: 0 auto 19px auto;
+
+  font-size: 17px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.modal__list {
+  display: grid;
+  max-width: 350px;
+  margin: 0 auto;
+  padding: 0;
+
+  list-style: none;
+
+  gap: 7px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.modal__input:checked {
+  + .modal__mark {
+    border-color: @downy-light;
+  }
+}
+
+.modal__mark {
+  display: block;
+  flex-grow: 1;
+  min-width: 82px;
+  padding: 18px 10px;
+
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 16px;
+  text-align: center;
+  color: @charcoal;
+
+  border: 2px solid rgba(@charcoal, 0.1);
+  cursor: pointer;
+
+  &:hover {
+    border-color: rgba(@charcoal, 0.3);
+  }
+}
+
+.modal__button {
+  max-width: 350px;
+  margin: 31px auto 0 auto;
+  padding: 18px;
+
+  font-size: 17px;
+  line-height: 16px;
+  color: @color-white;
+
+  background-color: @downy;
+  border: none;
+
+  &:hover {
+    background-color: @puerto-rico;
+  }
+}

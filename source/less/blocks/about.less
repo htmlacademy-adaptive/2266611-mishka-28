@@ -1,0 +1,135 @@
+.about {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 31px 30px 29px 30px;
+
+  @media (min-width: @vp-768) {
+    padding: 55px 50px 41px 50px;
+  }
+
+  @media (min-width: @vp-1150) {
+    padding: 68px 50px 45px 225px;
+  }
+}
+
+.about__title {
+  margin: 0;
+}
+
+.about__list {
+  display: grid;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  column-gap: 70px;
+
+  grid-template-columns: repeat(auto-fill, 265px);
+
+  @media (min-width: @vp-768) {
+    font-size: 20px;
+    line-height: 22px;
+    column-gap: 35px;
+
+    grid-template-columns: repeat(auto-fill, 300px);
+    row-gap: 11px;
+  }
+
+  @media (min-width: @vp-1150) {
+    column-gap: 50px;
+
+    row-gap: 12px;
+  }
+}
+
+.about__item {
+  position: relative;
+
+  margin-top: 83px;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    background-repeat: no-repeat;
+  }
+
+  &:nth-child(even) {
+    order: 1;
+  }
+
+  &--material::before {
+    bottom: calc(100% + 16px);
+    left: 8px;
+
+    width: 33px;
+    height: 38px;
+
+    background-image: url("../img/svg/material-icon.svg");
+  }
+
+  &--design::before {
+    bottom: calc(100% + 26px);
+    left: 0;
+
+    width: 47px;
+    height: 27px;
+
+    background-image: url("../img/svg/design-icon.svg");
+  }
+
+  &--likes::before {
+    bottom: calc(100% + 21px);
+    left: 7px;
+
+    width: 34px;
+    height: 27px;
+
+    background-image: url("../img/svg/likes-icon.svg");
+  }
+
+  &--handmade::before {
+    bottom: calc(100% + 17px);
+    left: 3px;
+
+    width: 35px;
+    height: 34px;
+
+    background-image: url("../img/svg/handmade-icon.svg");
+  }
+
+  &--native::before {
+    bottom: calc(100% + 26px);
+    left: -6px;
+
+    width: 55px;
+    height: 23px;
+
+    background-image: url("../img/svg/native-icon.svg");
+  }
+
+  &--package::before {
+    bottom: calc(100% + 20px);
+    left: 3px;
+
+    width: 33px;
+    height: 32px;
+
+    background-image: url("../img/svg/package-icon.svg");
+  }
+
+  @media (min-width: @vp-768) {
+    margin-top: 99px;
+
+    &:nth-child(even) {
+      order: 0;
+    }
+  }
+
+  @media (min-width: @vp-1150) {
+    margin-top: 97px;
+  }
+}

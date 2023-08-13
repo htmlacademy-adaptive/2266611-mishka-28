@@ -1,0 +1,40 @@
+.button {
+  display: block;
+  width: 100%;
+  padding: 14px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  font-family: @ff-open-sans;
+  text-align: center;
+  color: @charcoal;
+  text-transform: uppercase;
+
+  background: @transparent;
+  border: 2px solid @charcoal;
+  cursor: pointer;
+
+  transition: background-color 0.6s ease, color 0.2s ease;
+
+  &:hover {
+    color: @color-white;
+
+    background-color: @charcoal;
+  }
+
+  &:active {
+    color: rgba(@color-white, 0.3);
+  }
+
+  &:focus-visible {
+    outline: none;
+    border-color: @downy;
+  }
+
+  @media (min-width: @vp-768) {
+    padding: 15px;
+
+    font-size: 17px;
+  }
+}
