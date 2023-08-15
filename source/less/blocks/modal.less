@@ -66,6 +66,7 @@
   z-index: 15;
 
   width: 100%;
+  min-width: 320px;
   max-width: 566px;
   padding: 28px 30px 46px 30px;
 
@@ -99,9 +100,12 @@
   display: block;
   margin: 0 auto 19px auto;
 
-  font-size: 17px;
   line-height: 30px;
   text-align: center;
+
+  @media (min-width: @vp-768) {
+    font-size: 17px;
+  }
 }
 
 .modal__list {
